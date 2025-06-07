@@ -1,8 +1,13 @@
+import { Header } from './components/Header.jsx';
+import { ProductCatalog } from './components/ProductCatalog.jsx';
+import { CartProvider } from './contexts/CartContext.jsx';
+
 function App() {
   return (
-    <h1 class="text-3xl font-bold underline text-red-700">
-      Hello world!
-    </h1>
+    <CartProvider>
+      <Header />
+      <ProductCatalog />
+    </CartProvider>
   )
 }
 
